@@ -1,0 +1,24 @@
+athenagluetransform:
+  outputs:
+
+    dev:
+      type: athena
+      region_name: "us_east_1"
+      s3_staging_dir: "s3://dbt_s3_location/dbt/"
+      schema: imdb
+      database: awsdatacatalog
+      work_group: "dbt_work_group"
+      threads: 3
+      aws_profile_name: athenaglue
+
+    prod:
+      type: athena
+      region_name: "us_east_1"
+      s3_staging_dir: "s3://dbt_s3_location/dbt/"
+      schema: imdb
+      database: awsdatacatalog
+      work_group: "dbt_work_group"
+      threads: 3
+      aws_profile_name: athenaglue
+
+  target: dev
